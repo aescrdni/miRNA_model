@@ -4,10 +4,9 @@ This repository contains the code and parameters for the miRNA-mediated repressi
 # Prerequisites
 The model was implemented in MATLAB R2019a, and works only on linux, as it augments several linux-based tools.
 
-# Running the model r
+# Running the model
 
-
-The main function, used to predict repression, is predict.m. It accepts a target site and outputs its predicted repression value.
+The main function, used to predict repression, is predict.m. It accepts a target site (along with some additional data) and outputs its predicted repression value.
 
 # Input
 "predict" requires the following input:
@@ -16,3 +15,11 @@ The main function, used to predict repression, is predict.m. It accepts a target
 The complete nucleotide sequence of the RNA, including 5'UTR, ORF and 3'UTR.
 
 2. miRNA [char]
+The complete nucleotide sequence of the miRNA.
+
+3. 
+
+# Credits
+Authors: Shaked Bergman, Alon Diament and Tamir Tuller.
+
+The model incorporates programs amd data from multiple sources; please see the paper for full credits.
