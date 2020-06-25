@@ -1,5 +1,5 @@
 # A model for miRNA-mediated repression, implementing translation-related features
-This repository contains the code and parameters for the miRNA-mediated repression model, used in our paper [TBD].
+This repository contains the code and parameters for the miRNA-mediated repression model, used in our paper [Submitted to "Bioinformatics"].
 
 # Requirements
 The model was implemented in MATLAB R2019a, and works only on linux, as it incorporates several linux-based tools.
@@ -10,6 +10,9 @@ The main function, used to predict repression, is predict.m. It accepts a target
 predict_example.m is an example script of running the model, using example data (10 target sites from the validation dataset) stored in input_example.mat
 
 # Input
+
+output = predict(RNA, ORF_start, UTR3_start, miRNA, RNA_start, seed_type, phastcons20, phastcons100, phylops20, phylops100, riboseq, with_features)
+
 "predict" requires the following input:
 
 1. RNA [char]<br />
@@ -47,7 +50,7 @@ If with_features == 0, output is the log2 fold change of mRNA levels (as a resul
 If with_features == 1, output is a 1-row table, containing all calculated features as well as the log2 fold change value.
 
 # Finding target sites
-
+Canonical binding sites may be found independently by the user, or by employing the function Utils/find_potential_targets.m. This function can find either only canonical targets or both canonical and non-canonical targets, using the argument "is_canonical".
 # Credits
 Authors: Shaked Bergman, Alon Diament and Tamir Tuller.
 
