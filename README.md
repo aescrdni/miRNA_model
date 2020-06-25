@@ -52,9 +52,11 @@ If with_features == 1, output is a 1-row table, containing all calculated featur
 # Finding target sites
 Canonical binding sites may be found independently by the user, or by employing the function Utils/find_potential_targets.m. This function can find either only canonical targets or both canonical and non-canonical targets, using the argument "is_canonical".
 
+seed_table = find_potential_targets(RNA,miRNA,ORF_start,UTR3_start,only_canonical)
+
 The first 4 input arguments are as in "predict". 
 
-is_canonical is a 0/1 index to find only canonical target sites, or both canonical and non-canonical sites (as appear in Table S1)
+only_canonical is a 0/1 index to find only canonical target sites, or both canonical and non-canonical sites (the non-canonical sites are detailed in Table S1)
 
 # Credits
 Authors: Shaked Bergman, Alon Diament and Tamir Tuller.
