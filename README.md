@@ -5,7 +5,7 @@ This repository contains the code and parameters for the miRNA-mediated repressi
 The model was implemented in MATLAB R2019a, and works only on linux, as it incorporates several linux-based tools.
 
 # Running the model
-The main function, used to predict repression, is predict.m. It accepts a target site (along with some additional data) and outputs its predicted repression value - possibly with the calculated features.
+The main function, used to predict repression, is predict.m. It accepts a target site (along with some additional data) and outputs its predicted repression value (optionally including the calculated features as well) .
 
 predict_example.m is an example script of running the model, using example data (10 target sites from the validation dataset) stored in input_example.mat
 
@@ -51,6 +51,11 @@ If with_features == 1, output is a 1-row table, containing all calculated featur
 
 # Finding target sites
 Canonical binding sites may be found independently by the user, or by employing the function Utils/find_potential_targets.m. This function can find either only canonical targets or both canonical and non-canonical targets, using the argument "is_canonical".
+
+The first 4 input arguments are as in "predict". 
+
+is_canonical is a 0/1 index to find only canonical target sites, or both canonical and non-canonical sites (as appear in Table S1)
+
 # Credits
 Authors: Shaked Bergman, Alon Diament and Tamir Tuller.
 
