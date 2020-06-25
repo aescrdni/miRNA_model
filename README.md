@@ -7,7 +7,7 @@ The model was implemented in MATLAB R2019a, and works only on linux, as it incor
 # Running the model
 The main function, used to predict repression, is predict.m. It accepts a target site (along with some additional data) and outputs its predicted repression value (optionally including the calculated features as well) .
 
-predict_example.m is an example script of running the model, using example data (10 target sites from the validation dataset) stored in input_example.mat
+A sample miR-124 target site in ENST00000376838, from the training set, is stored in Data/input_sample.mat
 
 # Input
 
