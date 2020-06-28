@@ -1,5 +1,5 @@
 # A model for miRNA-mediated repression, implementing translation-related features
-This repository contains the code and parameters for the miRNA-mediated repression model, used in our paper [Submitted to "Bioinformatics"].
+This repository contains the code and parameters for the miRNA-mediated repression model, used in our paper [Submitted to "Bioinformatics"]. The code is freely available for academic usage.
 
 # Requirements
 The model was implemented in MATLAB R2019a, and works only on linux, as it incorporates several linux-based tools.
