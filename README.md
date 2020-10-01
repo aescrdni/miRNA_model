@@ -45,9 +45,9 @@ A 1x3 vector, containing average RiboSeq score for the first, second and last th
 # Output
 The output type depends on "with_features":
 
-If ```with_features``` == 0, output is the log2 fold change of mRNA levels (as a result of the miRNA-mediated repression via the input target site).
+If ```with_features == 0```, output is the log2 fold change of mRNA levels (as a result of the miRNA-mediated repression via the input target site).
 
-If ```with_features``` == 1, output is a 1-row table, containing all calculated features as well as the log2 fold change value.
+If ```with_features == 1```, output is a 1-row table, containing all calculated features as well as the log2 fold change value.
 
 # Finding target sites
 Canonical binding sites may be found independently by the user, or by employing the function ```Utils/find_potential_targets.m```. This function can find either only canonical targets or both canonical and non-canonical targets, using the argument ```is_canonical```.
