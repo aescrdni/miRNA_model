@@ -13,7 +13,7 @@ A sample miR-124 target site in ENST00000376838, from the training set, is store
 
 ```output = predict(RNA, ORF_start, UTR3_start, miRNA, RNA_start, seed_type, phastcons20, phastcons100, phylops20, phylops100, riboseq, with_features)```
 
-"predict" requires the following input:
+```predict``` requires the following input:
 
 1. ```RNA``` [char]<br />
 The complete nucleotide sequence of the mRNA, including 5'UTR, ORF and 3'UTR.
@@ -43,7 +43,7 @@ A 1x3 vector, containing average RiboSeq score for the first, second and last th
 0/1 index for including calculated features in the output or only the predicted repression
 
 # Output
-The output type depends on "with_features":
+The output type depends on ```with_features```:
 
 If ```with_features == 0```, output is the log2 fold change of mRNA levels (as a result of the miRNA-mediated repression via the input target site).
 
