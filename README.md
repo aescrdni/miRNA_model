@@ -31,6 +31,9 @@ If ```with_features == 0```, ```feature_table``` includes canonical binding site
 
 If ```with_features == 1```, ```feature_table``` includes all per-site features as well.
 
+# Custom prediction
+Users can run custom mRNAs and data, if their mRNA doesn't exist in the model database, or if they wish to include custom conservation/RiboSeq data. See predict_site manual.md for more details.
+
 # Credits
 Authors: Shaked Bergman, Alon Diament and Tamir Tuller.
 
