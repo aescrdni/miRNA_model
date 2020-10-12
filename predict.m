@@ -11,23 +11,29 @@ function [total_repression,feature_table] = predict(mRNA_ID,miRNA_seq,with_featu
 %predicted repression [double]
 
 addpath('Utils')
-load('Data/genes.mat','genes')
+load('Data/gene_list.mat','gene_list')
 
-genes = genes(strcmp(genes.ENST,mRNA_ID),:);
+gene_ind = find(strcmp(gene_list.ENST,mRNA_ID),1);
 
-if height(genes) == 0
+if isempty(gene_ind)
     error('Sorry, this ENST doesn''t exist in the database. predict_site may be used for custom genes')
 end
+
+websave('genes.mat',sprintf('address/genes_%d.mat',gene_list.ind(gene_ind)));
+load('genes.mat','genes')
+
+genes = genes(strcmp(genes.ENST,mRNA_ID),:);
 
 UTR5 = genes.UTR5{1};
 ORF = genes.ORF{1};
 UTR3 = genes.UTR3{1};
 RNA = [UTR5,ORF,UTR3];
 
-phastcons20 = genes.phastcons20{1};
-phastcons100 = genes.phastcons100{1};
-phylops20 = genes.phylops20{1};
-phylops100 = genes.phylops100{1};
+s = genes.missing_len(1);
+phastcons100{1} = [zeros(s,1); genes.phastcons100{1}];
+phastcons20{1} = [zeros(s,1); genes.phastcons20{1}];
+phylops100{1} = [zeros(s,1); genes.phylops100{1}];
+phylops20{1} = [zeros(s,1); genes.phylops20{1}];
 riboseq = genes.riboseq{1};
 
 clear genes
