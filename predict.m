@@ -19,8 +19,7 @@ if isempty(gene_ind)
     error('Sorry, this ENST doesn''t exist in the database. predict_site may be used for custom genes')
 end
 
-websave('genes.mat',sprintf('address/genes_%d.mat',gene_list.ind(gene_ind)));
-load('genes.mat','genes')
+load(sprintf('Data/genes_%d.mat',gene_list.ind(gene_ind)),'genes')
 
 genes = genes(strcmp(genes.ENST,mRNA_ID),:);
 
