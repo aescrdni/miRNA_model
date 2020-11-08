@@ -5,7 +5,7 @@ This repository contains the code and parameters for the miRNA-mediated repressi
 The model was implemented in MATLAB R2019a, and works only on linux, as it incorporates several linux-based tools.
 
 # Running the model
-The main function, used to predict repression, is ```predict.m```. It accepts an ENST number and a miRNA sequence, and outputs their canonical binding sites and predicted repression value (optionally including the calculated features as well) .
+The main function, used to predict repression, is ```predict.m```. It accepts an ENST number and a miRNA sequence, and outputs their canonical binding sites and predicted repression value (optionally including the calculated features as well). Before running the code, the gene data file should be downloaded from [here](https://www.cs.tau.ac.il/~tamirtul/miRNA_Data.zip) and unzipped to the "Data" folder.
 
 # Input
 
