@@ -1,7 +1,7 @@
 function output = predict_site(RNA,ORF_start,UTR3_start,miRNA,RNA_start,...
     seed_type,phastcons20,phastcons100,phylops20,phylops100,riboseq,with_features)
 
-%Calculating features for a binding site table
+%Calculating features for a single target site
 %RNA = The sequence of the mRNA, including UTRs [char]
 
 %ORF/UTR3_start = The first coordinate of the ORF/UTR3 region in "mRNA"
